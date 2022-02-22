@@ -1,5 +1,8 @@
 <h1>Do the TODOs</h1>
 
+# Added code
+<% if @current_user %>
+
 <%= form_with model: @task do |form| %>
   <%= form.text_field "description" %>
   <%= form.submit "Add new task" %>
@@ -17,3 +20,9 @@
     </tr>
   <% end %>
 </table>
+
+# Added code
+<% else %>
+        <a href="/sessions/new">Login</a>or
+        <a href="/users/new">Sign Up</a>or
+      <% end %>
